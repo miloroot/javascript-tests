@@ -52,11 +52,8 @@ var TestModule = ( function( window, undefined ) {
     }
   }
 
-  function useTrue() {
+  function clickHandlers() {
     $setTrue.on( 'click', trueSetter );
-  }
-
-  function useFalse() {
     $setFalse.on( 'click', falseSetter );
   }
 
@@ -67,14 +64,12 @@ var TestModule = ( function( window, undefined ) {
   ****************************************************/
   return {
     setVariable : useChosenFunction,
-    setVariableTrue : useTrue,
-    setVariableFalse : useFalse,
+    clickEvents : clickHandlers,
     showMessage : setMessage
   }
 
 })( window );
 
 TestModule.setVariable();
-TestModule.setVariableTrue();
-TestModule.setVariableFalse();
+TestModule.clickEvents();
 TestModule.showMessage();
