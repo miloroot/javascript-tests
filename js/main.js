@@ -20,6 +20,7 @@ var TestModule = ( function( window, undefined ) {
   /****************************************************
   **
   ** Methods that are called in other methods.
+  ** Not in the return object.
   **
   ****************************************************/
   function trueSetter() {
