@@ -64,12 +64,10 @@ var TestModule = ( function( window, undefined ) {
   ****************************************************/
   return {
     setVariable : useChosenFunction,
-    clickEvents : clickHandlers,
-    showMessage : setMessage
+    clickEvents : clickHandlers
   }
 
 })( window );
 
 TestModule.setVariable();
 TestModule.clickEvents();
-TestModule.showMessage();
