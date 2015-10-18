@@ -6,11 +6,12 @@ var TestModule = ( function( window, undefined ) {
   **
   ****************************************************/
   var $setTrue = $( '.set-true' ),
-      $setFalse = $( '.set-false' );
+      $setFalse = $( '.set-false' ),
+      $messageBox = $( '.messages' );
 
   /****************************************************
   **
-  ** Setting variable states.
+  ** Setting variables and methods initial states.
   **
   ****************************************************/
   var changer = null;
@@ -31,6 +32,10 @@ var TestModule = ( function( window, undefined ) {
     useChosenFunction();
   }
 
+  function setMessage( message ) {
+    $messageBox.html( message );
+  }
+
   /****************************************************
   **
   ** Methods that are called in the return object.
@@ -39,9 +44,11 @@ var TestModule = ( function( window, undefined ) {
   function useChosenFunction() {
     if( changer == true ) {
       console.log( "You set the state of variable 'changer' to: ", changer );
+      setMessage( "Chosen state is: true" );
     }
     else if( changer == false ) {
       console.log( "You set the state of variable 'changer' to: ", changer );
+      setMessage( "Chosen state is: false" );
     }
   }
 
@@ -61,7 +68,8 @@ var TestModule = ( function( window, undefined ) {
   return {
     setVariable : useChosenFunction,
     setVariableTrue : useTrue,
-    setVariableFalse : useFalse
+    setVariableFalse : useFalse,
+    showMessage : setMessage
   }
 
 })( window );
@@ -69,3 +77,4 @@ var TestModule = ( function( window, undefined ) {
 TestModule.setVariable();
 TestModule.setVariableTrue();
 TestModule.setVariableFalse();
+TestModule.showMessage();
