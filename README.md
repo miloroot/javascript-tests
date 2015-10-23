@@ -14,3 +14,5 @@ Better to do a function that takes parameters and execute inside if-statement
 with correct parameters. (already knew this, but look at the repos name)
 
 ### /test_three
+Trying out some ES6 code/syntax, see if Chrome 46 can handle it out of the box,
+with no transpiler/compiler. 
