@@ -24,3 +24,39 @@ $( function() {
   });
 
 });
+
+/****************************
+**
+** The code below is the same code as above but recoded
+** in Revealing Modular Pattern design.
+**
+*****************************/
+
+var TestModule = ( function( window, undefined ) {
+
+  var $setTrueButton = $( '.set-true' ),
+      $setFalseButton = $( '.set-false' ),
+      $messagebox = $( '.messagebox' );
+
+  var setter = undefined;
+
+  function setTrue() {
+    setter = true;
+  }
+
+  function setFalse() {
+    setter = false;
+  }
+
+  function clickHandlers() {
+    $setTrueButton.on( 'click', setTrue );
+    $setFalseButton.on( 'click', setFalse );
+  }
+
+  return {
+    clickEvents : clickHandlers
+  };
+
+} )( window );
+
+TestModule.clickEvents();
