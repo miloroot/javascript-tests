@@ -6,5 +6,11 @@ Each test will be inside a folder with name "test_#", where # is the number of t
 ### /test_one
 Change what a function does, depending if a variable is true or false.
 
-### /test_two [working on this]
+### /test_two
 Override a function depending on a variables true or false state.
+Test failed as functions cant be read inside if-statements, or at least so it seems.
+And its probably also bad practice.
+Better to do a function that takes parameters and execute inside if-statement
+with correct parameters. (already knew this, but look at the repos name)
+
+### /test_three
